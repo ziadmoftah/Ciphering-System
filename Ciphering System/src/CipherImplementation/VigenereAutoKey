@@ -1,0 +1,99 @@
+package CipherImplementation;
+
+public class VigenereAutoKey extends Cipher {
+    public VigenereAutoKey(String plainText, String key) {
+        super(plainText, key);
+    }
+
+    @Override
+    String getKey() {
+        return Key;
+    }
+
+    @Override
+    String Encrypt() {
+        char[] encryptedData;
+        char[] key;
+        int k=0;
+
+        for(int i=0;i<PlainText.length();++i)
+        {
+            char c=PlainText.charAt(i);
+            if(Character.isAlphabetic(c))
+            {
+                Key+=c;
+            }
+        }
+
+        Key=Key.toLowerCase();
+
+        encryptedData=new char[PlainText.length()];
+        key=Key.toCharArray();
+
+        for(int i=0;i<PlainText.length();++i)
+        {
+            k%=key.length;
+            char temp=PlainText.charAt(i);
+            if(Character.isAlphabetic(temp))
+            {
+                if(Character.isUpperCase(temp))
+                {
+                    temp=(char)(temp+key[k]-'a');
+                    if(temp>'Z')
+                        temp=(char)(temp-26);
+                }
+                else if(Character.isLowerCase(temp))
+                {
+                    temp=(char)(temp+key[k]-'a');
+                    if(temp>'z')
+                        temp=(char)(temp-26);
+                }
+                k++;
+            }
+            encryptedData[i]=temp;
+            //System.out.print(temp);
+        }
+        String temp="";
+        for(int i=0;i<encryptedData.length;++i)
+        {
+            temp+=encryptedData[i];
+        }
+        return temp;
+    }
+
+    @Override
+    String Decrypt() {
+        int k=0;
+        char[] key=Key.toCharArray();
+        char[] decryptedData=new char[PlainText.length()];
+        for(int i=0;i<PlainText.length();++i)
+        {
+            char temp=PlainText.charAt(i);
+            if(Character.isAlphabetic(temp))
+            {
+                k%=key.length;
+                if(Character.isUpperCase(temp))
+                {
+                    temp=(char)(temp-(key[k]-'a'));
+                    if(temp<'A')
+                        temp=(char)(temp+26);
+                }
+                else if(Character.isLowerCase(temp))
+                {
+                    temp=(char)(temp-(key[k]-'a'));
+                    if(temp<'a')
+                        temp=(char)(temp+26);
+                }
+                key[k]=Character.toLowerCase(temp);
+                k++;
+            }
+            decryptedData[i]=temp;
+        }
+        String temp="";
+        for(int i=0;i<decryptedData.length;++i)
+        {
+            temp+=decryptedData[i];
+        }
+        return temp;
+    }
+}
