@@ -15,7 +15,7 @@ class PlayFair extends Cipher
 
     void SplitString()
     {
-        String NewPlainText= PlainText.replaceAll(" ", "");
+        String NewPlainText= PlainText.replaceAll("\\s+", "");
         int index = 0;
 
 
