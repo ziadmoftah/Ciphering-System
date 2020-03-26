@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad851be1-d9f5-46cb-91d2-5f160a45a41a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CipherImplementation/Cipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherImplementation/Cipher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CipherImplementation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherImplementation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CipherImplementation/VigenereWithReapeatingKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherImplementation/VigenereWithReapeatingKey.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,56 +83,45 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="768" y="271" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1585169151739" />
-    <state x="718" y="297" key="#xdebugger.evaluate" timestamp="1585169992272">
+    <state x="714" y="494" key="#xdebugger.evaluate" timestamp="1585175795751">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="718" y="297" key="#xdebugger.evaluate/0.27.1920.1053@0.27.1920.1053" timestamp="1585169992272" />
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1585170480563">
+    <state x="714" y="494" key="#xdebugger.evaluate/0.27.1920.1053@0.27.1920.1053" timestamp="1585175795751" />
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom" timestamp="1585238872933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1585170480563" />
-    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1585170480562">
+    <state width="1874" height="278" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1585238872933" />
+    <state width="1874" height="278" key="GridCell.Tab.0.center" timestamp="1585238872933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1585170480562" />
-    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1585170480562">
+    <state width="1874" height="278" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1585238872933" />
+    <state width="1874" height="278" key="GridCell.Tab.0.left" timestamp="1585238872932">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585170480562" />
-    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1585170480563">
+    <state width="1874" height="278" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585238872932" />
+    <state width="1874" height="278" key="GridCell.Tab.0.right" timestamp="1585238872933">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585170480563" />
-    <state width="1874" height="344" key="GridCell.Tab.1.bottom" timestamp="1585170280923">
+    <state width="1874" height="278" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585238872933" />
+    <state width="1874" height="344" key="GridCell.Tab.1.bottom" timestamp="1585175846397">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="344" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1585170280923" />
-    <state width="1874" height="344" key="GridCell.Tab.1.center" timestamp="1585170280922">
+    <state width="1874" height="344" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1585175846397" />
+    <state width="1874" height="344" key="GridCell.Tab.1.center" timestamp="1585175846397">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="344" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1585170280922" />
-    <state width="1874" height="344" key="GridCell.Tab.1.left" timestamp="1585170280922">
+    <state width="1874" height="344" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1585175846397" />
+    <state width="1874" height="344" key="GridCell.Tab.1.left" timestamp="1585175846396">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="344" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585170280922" />
-    <state width="1874" height="344" key="GridCell.Tab.1.right" timestamp="1585170280923">
+    <state width="1874" height="344" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585175846396" />
+    <state width="1874" height="344" key="GridCell.Tab.1.right" timestamp="1585175846397">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="344" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585170280923" />
+    <state width="1874" height="344" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585175846397" />
     <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1585011761445">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585011761445" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CipherImplementation/VigenereWithReapeatingKey.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
