@@ -7,7 +7,7 @@ public abstract class Cipher {
     public Cipher(String plainText, String key) {
         PlainText = plainText;
         Key = key;
-        Key = Key.toLowerCase();
+
     }
 
     abstract String getKey() ;
