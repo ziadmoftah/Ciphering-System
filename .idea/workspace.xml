@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e38cbab7-9f0b-4e2a-acee-9f074751b639" name="Default Changelist" comment="" />
+    <list default="true" id="e38cbab7-9f0b-4e2a-acee-9f074751b639" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Cipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Cipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,30 +77,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="66" y="348" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585243383458" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585246479389">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1585278168226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585246479389" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585246479388">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168226" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1585278168225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585246479388" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585246479388">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168225" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1585278168225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585246479388" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585246479388">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168225" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1585278168226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585246479388" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168226" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1585278168463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168463" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1585278168463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168463" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1585278168463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168463" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1585278168463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585278168463" />
     <state x="880" y="90" key="SettingsEditor" timestamp="1585244002537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="880" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585244002537" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585242809195">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585261550491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242809195" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585261550491" />
     <state x="657" y="311" key="git4idea.merge.GitPullDialog" timestamp="1585242266815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -104,6 +125,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585240969542" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="LetterTable" />
+        <watch expression="letters.get(initial_letter) == false" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ciphering_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1585242542580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
