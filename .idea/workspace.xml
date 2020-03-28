@@ -29,13 +29,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="13.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="CipherImplementation.Main" />
       <module name="Ciphering-System" />
       <method v="2">
@@ -61,18 +63,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1585242709917" />
-    <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585242855972">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="447" y="131" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585426686545">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="447" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585426686545" />
     <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242855972" />
     <state x="893" y="338" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585242854237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="893" y="338" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242854237" />
-    <state x="620" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585425191825">
+    <state x="620" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585426722618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="620" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1585425191825" />
+    <state x="620" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1585426722618" />
     <state x="66" y="348" key="FileChooserDialogImpl" timestamp="1585243383458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -93,9 +96,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585243646287" />
-    <state x="880" y="90" key="SettingsEditor" timestamp="1585244002537">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="498" y="0" key="SettingsEditor" timestamp="1585426759025">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="498" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585426759025" />
     <state x="880" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585244002537" />
     <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1585424656455">
       <screen x="0" y="0" width="1536" height="824" />
