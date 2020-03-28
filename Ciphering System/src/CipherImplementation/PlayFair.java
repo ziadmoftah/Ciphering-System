@@ -21,7 +21,15 @@ class PlayFair extends Cipher
         Key = Key.toUpperCase();
         this.FillTable();
     }
-
+    public PlayFair(String plainText)
+    {
+        super(plainText,null);
+        Char_Index=new pair[2];
+        Char_Array = new ArrayList<pair>();
+        New_Char_Array=new ArrayList<pair>();
+        Key = Key.toUpperCase();
+        this.FillTable();
+    }
 
     void SplitString()
     {
@@ -181,9 +189,8 @@ class PlayFair extends Cipher
         }
         char[] a=new char[New_Char_Array.size()*2];
 
-        int c=0;
+        int c = 0;
         for(int j=0;j<a.length;j++)
-
         {
             if((j+1)!=a.length)
             {
@@ -192,7 +199,6 @@ class PlayFair extends Cipher
                 j++;
                 c++;
             }
-
         }
         EncryptedText=new String(a);
         return EncryptedText;
@@ -256,6 +262,7 @@ class PlayFair extends Cipher
             }
 
         }
+
         char[] a=new char[New_Char_Array.size()*2];
 
         int c=0;
