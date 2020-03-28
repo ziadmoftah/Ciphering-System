@@ -4,7 +4,7 @@ public abstract class Cipher {
     protected String PlainText, EncryptedText, Key ;
 
 
-    public Cipher(String plainText, String key) {
+    public Cipher( String plainText, String key) {
         PlainText = plainText;
         Key = key;
 
