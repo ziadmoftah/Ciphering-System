@@ -1,5 +1,8 @@
 package CipherImplementation;
 
+import java.lang.reflect.GenericArrayType;
+import java.util.Random;
+
 abstract class Vigenere extends Cipher {
     protected String NewKey ;
     public Vigenere(String plainText, String key) {
@@ -53,5 +56,14 @@ abstract class Vigenere extends Cipher {
             return in ;
         }
         return 0 ;
+    }
+    protected String GenerateRandomKey(){
+        char GeneratedKey[] = new char[PlainText.length()] ;
+        Random Rd = new Random() ;
+        for ( int i = 0 ; i < PlainText.length() ; i ++ ){
+            int randomInt = Rd.nextInt(26)  ;
+            GeneratedKey[i] = (char)(randomInt+'A') ;  ;
+        }
+        return String.valueOf(GeneratedKey) ;
     }
 }

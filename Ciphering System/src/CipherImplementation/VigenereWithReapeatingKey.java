@@ -6,6 +6,13 @@ public class VigenereWithReapeatingKey extends  Vigenere{
         super(plainText, key);
         GetNewKey();
     }
+    public VigenereWithReapeatingKey(String plainText) {
+        super(plainText, null);
+        Key = super.GenerateRandomKey()  ;
+        GetNewKey() ;
+    }
+
+
 
     @Override
     public String getKey() {
