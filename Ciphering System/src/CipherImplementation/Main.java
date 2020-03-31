@@ -15,11 +15,6 @@ public class Main {
         System.out.println(v.Encrypt());
         System.out.println(v.Decrypt());
 
-        
-	
-
-
-
 
 
 	PlayFair obj = new PlayFair("Omar", "Key");
