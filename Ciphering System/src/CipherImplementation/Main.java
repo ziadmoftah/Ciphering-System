@@ -10,9 +10,22 @@ public class Main {
         System.out.println(VG.Encrypt()) ;
         System.out.println(VG.Decrypt());
 
+
         VigenereAutoKey v=new VigenereAutoKey("INKNA?dkldk  dsklhjssa" );
         System.out.println(v.Encrypt());
         System.out.println(v.Decrypt());
+
+        
+	
+
+
+
+
+
+	PlayFair obj = new PlayFair("Omar", "Key");
+        System.out.println(obj.Encrypt());
+        System.out.println(obj.Decrypt());
+
     }
 
 

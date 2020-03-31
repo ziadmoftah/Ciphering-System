@@ -22,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ZYLnpCwqXN0djRwC0LCgG3evLD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -68,8 +69,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+
     <state x="395" y="136" width="616" height="496" key="#Project_Structure" timestamp="1585508338497">
       <screen x="0" y="0" width="1366" height="768" />
+
     </state>
     <state x="395" y="136" width="616" height="496" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1585508338497" />
     <state x="555" y="214" width="847" height="677" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1585011294784" />
@@ -86,6 +89,7 @@
     </state>
     <state x="546" y="178" width="315" height="410" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1585507294116" />
     <state x="768" y="271" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1585011504125" />
+
     <state x="864" y="569" key="#xdebugger.evaluate" timestamp="1585426924982">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -112,6 +116,7 @@
     </state>
     <state width="1874" height="344" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1585667819914" />
     <state width="1874" height="344" key="GridCell.Tab.0.right" timestamp="1585667819915">
+
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="344" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1585667819915" />
@@ -171,5 +176,27 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="Char_Index" />
+        <watch expression="Char_Array" />
+        <watch expression="n" />
+        <watch expression="New_Char_Array" />
+        <watch expression="New_Char_Array.get(2)" />
+        <watch expression="Result_Letter1" />
+        <watch expression="Result_Letter2" />
+        <watch expression="Char_Index[0].i" />
+        <watch expression="[Char_Index[1].i]" />
+        <watch expression="LetterTable" />
+        <watch expression="a" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Ciphering_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1585331195181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>CipherImplementation.*</FILTER>
+    </SUITE>
   </component>
 </project>

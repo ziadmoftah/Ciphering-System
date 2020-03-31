@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e38cbab7-9f0b-4e2a-acee-9f074751b639" name="Default Changelist" comment="">
+
       <change afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/VigenereAutoKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciphering System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciphering System/out/production/Ciphering System/META-INF/Ciphering System.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Main.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +37,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+
     <property name="project.structure.last.edited" value="Modules" />
+
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="CipherImplementation.Main" />
       <module name="Ciphering-System" />
       <method v="2">
@@ -67,23 +73,27 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1585242709917" />
-    <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585242855972">
+    <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585438369732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242855972" />
+    <state x="447" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585426686545" />
+    <state x="616" y="165" width="1095" height="778" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585438369732" />
     <state x="893" y="338" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585242854237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="893" y="338" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242854237" />
+
     <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1585509496832">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="305" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1585509496832" />
     <state x="47" y="257" key="FileChooserDialogImpl" timestamp="1585509427246">
       <screen x="0" y="0" width="1366" height="768" />
+
     </state>
     <state x="47" y="257" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1585509427246" />
     <state x="66" y="348" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585243383458" />
+
     <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1585509014864">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -108,11 +118,12 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="326" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1585496279568" />
+
     <state x="880" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585244002537" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585242809195">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585415853409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585242809195" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585415853409" />
     <state x="657" y="311" key="git4idea.merge.GitPullDialog" timestamp="1585242266815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -121,6 +132,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585240969542" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1585446499307">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585446499307" />
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1585443750670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585432881922" />
+    <state x="539" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585443750670" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair.java</url>
+          <line>296</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="LetterTable" />
+        <watch expression="Xindices" />
+        <watch expression="Char_Array" />
+        <watch expression="New_Char_Array" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ciphering_System$Main.ic" NAME="Main Coverage Results" MODIFIED="1585242542580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
