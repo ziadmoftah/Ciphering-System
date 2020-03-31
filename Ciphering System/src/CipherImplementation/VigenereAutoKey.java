@@ -6,7 +6,10 @@ public class VigenereAutoKey extends Vigenere {
     public VigenereAutoKey(String plainText, String key) {
         super(plainText, key);
     }
-
+    public VigenereAutoKey(String plainText){
+        super(plainText, null);
+        Key=GenerateRandomKey();
+    }
     @Override
     String GetNewKey() {
         String temp=Key;
@@ -45,10 +48,7 @@ public class VigenereAutoKey extends Vigenere {
         char[] key;
         int k=0;
 
-        if(Key.equals(""))
-        {
-            Key=GenerateRandomKey();
-        }
+
         Key=GetNewKey();
 
         encryptedData=new char[PlainText.length()];
