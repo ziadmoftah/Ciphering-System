@@ -159,14 +159,14 @@ class PlayFair extends Cipher
     }
     
     @Override
-    String getKey ()
+    public String getKey ()
     {
         String lol ="haha";
         return lol;
     }
 
     @Override
-    String Encrypt ()
+    public String Encrypt ()
     {
         int Choice;
         SplitString();
@@ -218,7 +218,7 @@ class PlayFair extends Cipher
 
 
     @Override
-    String Decrypt ()
+    public String Decrypt()
     {
         int Choice;
         int l = 0,index1,index2;

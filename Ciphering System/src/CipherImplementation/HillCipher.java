@@ -27,6 +27,22 @@ class HillCipher extends Cipher
         }
     }
 
+    public HillCipher(String plaintext)
+    {
+        super( plaintext , null);
+        Hill_Key = new Key();
+        Hill_Key.Generate();
+        chars = new Hashtable();
+        Numbers = new Hashtable();
+        char ASCII;
+        for(int i=0;i<95;i++)
+        {
+            ASCII = (char)(i+32);
+            chars.put(i, ASCII);
+            Numbers.put(ASCII,i);
+        }
+    }
+
     public String getKey(){
 
         String K  = "";
