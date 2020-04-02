@@ -8,9 +8,9 @@ abstract class Vigenere extends Cipher {
     public Vigenere(String plainText, String key) {
         super(plainText,  key);
     }
-    public abstract String getKey() ;
-    public abstract String Encrypt() ;
-    public abstract String Decrypt() ;
+    public abstract String getKey ();
+    public abstract String Encrypt();
+    public abstract String Decrypt();
     abstract String GetNewKey() ;
     private Boolean IsAlpha(char in){
         return ( in >= 'A' &&  in <= 'Z') || ( in >= 'a' && in <= 'z') ;

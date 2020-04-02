@@ -17,10 +17,6 @@ public class Main {
         System.out.println("Encrypted text PlayFair   : " + obj.Encrypt());
         System.out.println("Decrypted text PlayFair   : " + obj.Decrypt());
 
-        Caesar c1 = new Caesar("Ciphering system", "150");
-        System.out.println("Encrypted text Caesarkey  : " + c1.Encrypt());
-        System.out.println("Decrypted text Caesarkey  : " + c1.Decrypt());
-
         Caesar c2 = new Caesar("Ciphering system");
         System.out.println("Encrypted text Caesar     : " + c2.Encrypt());
         System.out.println("Decrypted text Caesar     : " + c2.Decrypt());
