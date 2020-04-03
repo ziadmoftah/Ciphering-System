@@ -1,4 +1,4 @@
-package CipherImplementation;
+package CipherImplementation.PlayFair;
 
 public class pair {
     char char1;

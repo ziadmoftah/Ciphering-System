@@ -1,10 +1,12 @@
-package CipherImplementation;
+package CipherImplementation.PlayFair;
+
+import CipherImplementation.Cipher;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-class PlayFair extends Cipher
+public class PlayFair extends Cipher
 {
     private ArrayList<pair> Char_Array ;
     private ArrayList<pair> New_Char_Array;

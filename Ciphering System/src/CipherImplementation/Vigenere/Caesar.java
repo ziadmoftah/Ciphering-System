@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CipherImplementation;
+package CipherImplementation.Vigenere;
+
+import CipherImplementation.Cipher;
 
 import java.util.*;
 public class Caesar extends Cipher {
 
     private char key;
-    private Boolean IsAlpha(char in){
+    private static Boolean IsAlpha(char in){
         return ( in >= 'A' &&  in <= 'Z') || ( in >= 'a' && in <= 'z') ;
     }
-    private Boolean IsLowerCase( char in ){
+    private static Boolean IsLowerCase( char in ){
         return in >= 'a' && in <= 'z' ;
     }
-    private Boolean IsUpperCase( char in ){
+    private static Boolean IsUpperCase( char in ){
         return in >= 'A' && in <= 'Z' ;
     }
 
@@ -62,7 +64,7 @@ public class Caesar extends Cipher {
         return Integer.toString(this.key);
     }
 
-    protected char EncryptChar ( char in , char currKey ){
+    protected static char EncryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
                 int x = (in + Character.toLowerCase(currKey)-64) % 26 ;
@@ -80,7 +82,7 @@ public class Caesar extends Cipher {
         }
         return 0 ;
     }
-    protected char DecryptChar ( char in , char currKey ){
+    protected static char DecryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
                 int x = (in - Character.toLowerCase(currKey)+26) % 26 ;

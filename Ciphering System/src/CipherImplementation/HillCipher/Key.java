@@ -1,5 +1,7 @@
 
-package CipherImplementation;
+package CipherImplementation.HillCipher;
+import CipherImplementation.HillCipher.*;
+
 import java.util.Random;
 class Key
 {

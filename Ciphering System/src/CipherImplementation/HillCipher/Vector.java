@@ -1,5 +1,5 @@
-package CipherImplementation;
-
+package CipherImplementation.HillCipher;
+import CipherImplementation.HillCipher.*;
 class Vector
 {
     protected int elements[][];

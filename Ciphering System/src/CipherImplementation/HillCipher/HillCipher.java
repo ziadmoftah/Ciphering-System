@@ -1,8 +1,11 @@
-package CipherImplementation;
+package CipherImplementation.HillCipher;
+
+import CipherImplementation.Cipher;
+import CipherImplementation.HillCipher.*;
 
 import java.util.*;
 
-class HillCipher extends Cipher
+public class HillCipher extends Cipher
 {
 
     protected boolean text_even;
