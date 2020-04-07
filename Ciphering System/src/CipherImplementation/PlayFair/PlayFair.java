@@ -249,6 +249,16 @@ public class PlayFair extends Cipher
                     if (index2 == -1)
                         index2 = 8;
                 }
+                else if(mode == 'E')
+                {
+                    index1 = Char_Index[0].j + 1;
+                    index2 = Char_Index[1].j + 1;
+
+                    if (index1 == 9)
+                        index1 = 0;
+                    if (index2 == 9)
+                        index2 = 0;
+                }
                 Result_Letter1 = LetterTable[Char_Index[0].i][index1];
                 Result_Letter2 = LetterTable[Char_Index[1].i][index2];
 
