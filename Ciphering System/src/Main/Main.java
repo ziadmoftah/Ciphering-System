@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Rail_Fence RF = new Rail_Fence("We are discovered" , 2) ;
+        PlayFair RF = new PlayFair("We are discovered" , "haha");
         System.out.println(RF.Encrypt());
         System.out.println(RF.Decrypt());
 

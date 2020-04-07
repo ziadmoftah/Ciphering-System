@@ -8,10 +8,10 @@ import java.util.Map;
 
 public class PlayFair extends Cipher
 {
-    private ArrayList<pair> Char_Array ;
-    private ArrayList<pair> New_Char_Array;
-    private ArrayList<Integer> Xindices;
-    private pair []Char_Index;
+    private ArrayList<pair> Char_Array = new ArrayList<pair>();
+    private ArrayList<pair> New_Char_Array =new ArrayList<pair>();
+    private ArrayList<Integer> Xindices = new ArrayList<Integer>();
+    private pair []Char_Index=new pair[2];;
     private char [][]LetterTable = new char[9][9];
     private char Result_Letter1 , Result_Letter2;
     int counterX = 1;
@@ -19,21 +19,13 @@ public class PlayFair extends Cipher
     public PlayFair(String plainText, String key)
     {
         super(plainText,key);
-        Char_Index=new pair[2];
-        Char_Array = new ArrayList<pair>();
-        New_Char_Array=new ArrayList<pair>();
-        Xindices = new ArrayList<Integer>();
         this.FillTable();
     }
+
     public PlayFair(String plainText)
     {
-
         super(plainText, null);
         this.Key = GenerateRandomKey();
-        Char_Index=new pair[2];
-        Char_Array = new ArrayList<pair>();
-        New_Char_Array=new ArrayList<pair>();
-        Xindices = new ArrayList<Integer>();
         this.FillTable();
     }
 
@@ -129,7 +121,6 @@ public class PlayFair extends Cipher
     {
         int Case=0;
 
-
         for(int i = 0; i < 9; i++)
         {
             for(int j = 0; j < 9; j++)
@@ -165,8 +156,7 @@ public class PlayFair extends Cipher
     @Override
     public String getKey ()
     {
-        String lol ="haha";
-        return lol;
+        return Key;
     }
 
     @Override
@@ -174,48 +164,10 @@ public class PlayFair extends Cipher
     {
         int Choice;
         SplitString();
-        for(int k=0;k<Char_Array.size();k++)
-        {
-            Choice=Search(Char_Array.get(k));
 
-            if(Choice==1)
-            {
-                Result_Letter1=LetterTable[Char_Index[0].i][(Char_Index[0].j+1)%9];
-                Result_Letter2=LetterTable[Char_Index[1].i][(Char_Index[1].j+1)%9];
+        helper('e');
 
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-
-            }
-            else if(Choice==2)
-            {
-                Result_Letter1=LetterTable[(Char_Index[0].i+1)%9][Char_Index[0].j];
-                Result_Letter2=LetterTable[(Char_Index[1].i+1)%9][Char_Index[1].j];
-
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-            }
-            else if(Choice==3)
-            {
-                Result_Letter1=LetterTable[Char_Index[0].i][Char_Index[1].j];
-                Result_Letter2=LetterTable[Char_Index[1].i][Char_Index[0].j];
-
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-            }
-
-        }
-        char[] a=new char[New_Char_Array.size()*2];
-
-        int c = 0;
-        for(int j=0;j<a.length;j++)
-        {
-            if((j+1)!=a.length)
-            {
-                a[j]=New_Char_Array.get(c).char1;
-                a[j+1]=New_Char_Array.get(c).char2;
-                j++;
-                c++;
-            }
-        }
-        EncryptedText=new String(a);
+        EncryptedText= changeToString('E');
         return EncryptedText;
 
     }
@@ -224,8 +176,7 @@ public class PlayFair extends Cipher
     @Override
     public String Decrypt()
     {
-        int Choice;
-        int l = 0,index1,index2;
+        int l = 0;
         Char_Array.clear();
         New_Char_Array.clear();
         for(int i = 0; i < (EncryptedText.length() / 2); i++)
@@ -234,49 +185,15 @@ public class PlayFair extends Cipher
             l += 2;
 
         }
-        for(int k=0;k<Char_Array.size();k++)
-        {
-            Choice=Search(Char_Array.get(k));
 
-            if(Choice==1)
-            {
-                index1 = Char_Index[0].j - 1;
-                index2 = Char_Index[1].j - 1;
+        helper('D');
 
-                if(index1 == -1)
-                    index1 = 8;
-                if(index2 == -1)
-                    index2 = 8;
+        PlainText = changeToString('D');
 
-                Result_Letter1 = LetterTable[Char_Index[0].i][index1];
-                Result_Letter2 = LetterTable[Char_Index[1].i][index2];
+        return PlainText;
+    }
 
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-
-            }
-            else if(Choice==2)
-            {
-                index1 = Char_Index[0].i - 1;
-                index2 = Char_Index[1].i - 1;
-
-                if(index1 == -1)
-                    index1 = 8;
-                if(index2 == -1)
-                    index2 = 8;
-                Result_Letter1=LetterTable[index1][Char_Index[0].j];
-                Result_Letter2=LetterTable[index2][Char_Index[1].j];
-
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-            }
-            else if(Choice==3)
-            {
-                Result_Letter1=LetterTable[Char_Index[0].i][Char_Index[1].j];
-                Result_Letter2=LetterTable[Char_Index[1].i][Char_Index[0].j];
-
-                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
-            }
-
-        }
+    String changeToString(char mode) {
 
         char[] a=new char[New_Char_Array.size()*2];
 
@@ -293,23 +210,86 @@ public class PlayFair extends Cipher
             }
 
         }
-        if(counterX != 1) {
-            char[] b = new char[(New_Char_Array.size() * 2) - (counterX)];
-            c = 0;
-            for (int i = 0; i < a.length; i++) {
-                if (Xindices.get(z) != i) {
-                    b[c] = a[i];
-                    c++;
-                } else
-                    z++;
+        c = 0;
+        if (mode == 'D') {
+            if (counterX != 0) {
+                char[] b = new char[(New_Char_Array.size() * 2) - (counterX)];
+
+                for (int i = 0; i < a.length; i++) {
+                    if (Xindices.get(z) != i) {
+                        b[c] = a[i];
+                        c++;
+                    } else
+                        z++;
+
+                }
+                return new String(b);
+            }
+
+        }
+        return new String(a);
+    }
+
+    void helper(char mode)
+    {
+        int Choice;
+        int index1=0,index2=0;
+        for(int k=0;k<Char_Array.size();k++)
+        {
+            Choice=Search(Char_Array.get(k));
+
+            if(Choice==1)
+            {
+                if(mode == 'D') {
+                    index1 = Char_Index[0].j - 1;
+                    index2 = Char_Index[1].j - 1;
+
+                    if (index1 == -1)
+                        index1 = 8;
+                    if (index2 == -1)
+                        index2 = 8;
+                }
+                Result_Letter1 = LetterTable[Char_Index[0].i][index1];
+                Result_Letter2 = LetterTable[Char_Index[1].i][index2];
+
+                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
 
             }
-            PlainText = new String(b);
-        }
-        else
-            PlainText = new String(a);
+            else if(Choice==2)
+            {
+                if(mode == 'D') {
+                    index1 = Char_Index[0].j - 1;
+                    index2 = Char_Index[1].j - 1;
 
-        return PlainText;
+                    if (index1 == -1)
+                        index1 = 8;
+                    if (index2 == -1)
+                        index2 = 8;
+                }
+                else if(mode == 'E')
+                {
+                    index1 = Char_Index[0].j + 1;
+                    index2 = Char_Index[1].j + 1;
+
+                    if (index1 == 9)
+                        index1 = 0;
+                    if (index2 == 9)
+                        index2 = 0;
+                }
+                Result_Letter1=LetterTable[index1][Char_Index[0].j];
+                Result_Letter2=LetterTable[index2][Char_Index[1].j];
+
+                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
+            }
+            else if(Choice==3)
+            {
+                Result_Letter1=LetterTable[Char_Index[0].i][Char_Index[1].j];
+                Result_Letter2=LetterTable[Char_Index[1].i][Char_Index[0].j];
+
+                New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
+            }
+
+        }
     }
-    
 }
+
