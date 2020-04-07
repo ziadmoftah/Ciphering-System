@@ -27,7 +27,9 @@ public class PlayFair extends Cipher
     }
     public PlayFair(String plainText)
     {
-        super(plainText,null);
+
+        super(plainText, null);
+        this.Key = GenerateRandomKey();
         Char_Index=new pair[2];
         Char_Array = new ArrayList<pair>();
         New_Char_Array=new ArrayList<pair>();
