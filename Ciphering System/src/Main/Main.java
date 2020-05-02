@@ -5,15 +5,14 @@ import CipherImplementation.RailFence.Rail_Fence;
 import CipherImplementation.Vigenere.Caesar;
 import CipherImplementation.Vigenere.VigenereAutoKey;
 import CipherImplementation.Vigenere.VigenereWithReapeatingKey;
+import File.FileInputOutput;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        PlayFair RF = new PlayFair("We are discovered" , "haha");
-        System.out.println(RF.Encrypt());
-        System.out.println(RF.Decrypt());
-
-
+        FileInputOutput.SaveToFile("zz" , "hhhh") ;
+        String in = FileInputOutput.LoadFromFile("zz") ;
+        System.out.print(in);
     }
 }
