@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package CipherImplementation.Vigenere;
+
+package CipherImplementation.Caeser;
 
 import CipherImplementation.Cipher;
 
 import java.util.*;
-public class Caesar extends Cipher {
+public class Caeser extends Cipher {
 
     private char key;
     private static Boolean IsAlpha(char in){
@@ -21,7 +17,7 @@ public class Caesar extends Cipher {
         return in >= 'A' && in <= 'Z' ;
     }
 
-    public Caesar(String plain_text) {
+    public Caeser(String plain_text) {
         
         super( plain_text , null );
         Random Generator = new Random();
@@ -29,11 +25,9 @@ public class Caesar extends Cipher {
         this.key = (char)(x + 'a');
     }
 
-    public Caesar(String plain_text , String keyy) {
+    public Caeser(String plain_text , String keyy) {
 
          super( plain_text , null );
-         Random Generator = new Random();
-         int x = Generator.nextInt(26);
          this.key = keyy.charAt(0);
          super.Key = Character.toString(this.key);
     }
@@ -61,10 +55,10 @@ public class Caesar extends Cipher {
 
     public String getKey() {
 
-        return Integer.toString(this.key);
+        return String.valueOf(this.key);
     }
 
-    protected static char EncryptChar ( char in , char currKey ){
+    public static char EncryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
                 int x = (in + Character.toLowerCase(currKey)-64) % 26 ;
@@ -82,7 +76,7 @@ public class Caesar extends Cipher {
         }
         return 0 ;
     }
-    protected static char DecryptChar ( char in , char currKey ){
+    public static char DecryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
                 int x = (in - Character.toLowerCase(currKey)+26) % 26 ;
@@ -100,5 +94,4 @@ public class Caesar extends Cipher {
         }
         return 0 ;
     }
-
 }

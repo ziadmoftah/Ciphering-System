@@ -1,5 +1,7 @@
 package CipherImplementation.Vigenere;
 
+import CipherImplementation.Caeser.Caeser;
+
 import java.util.Random;
 
 public class VigenereAutoKey extends Vigenere {
@@ -60,7 +62,7 @@ public class VigenereAutoKey extends Vigenere {
             char tmp=PlainText.charAt(i);
             if(Character.isAlphabetic(tmp))
             {
-                tmp = Caesar.EncryptChar(tmp,Character.toUpperCase(key[k]));
+                tmp = Caeser.EncryptChar(tmp,Character.toUpperCase(key[k]));
                 k++;
             }
             encryptedData[i]=tmp;
@@ -85,7 +87,7 @@ public class VigenereAutoKey extends Vigenere {
             if(Character.isAlphabetic(tmp))
             {
                 k%=key.length;
-                tmp= Caesar.DecryptChar(tmp,key[k]);
+                tmp= Caeser.DecryptChar(tmp,key[k]);
                 k++;
             }
             decryptedData[i]=tmp;

@@ -1,6 +1,8 @@
 package CipherImplementation.Vigenere;
 
 
+import CipherImplementation.Caeser.Caeser;
+
 public class VigenereWithReapeatingKey extends Vigenere {
     public VigenereWithReapeatingKey(String plainText, String key) {
         super(plainText, key);
@@ -23,7 +25,7 @@ public class VigenereWithReapeatingKey extends Vigenere {
     public String Encrypt() {
         char encryptedtext[] = new char[PlainText.length()] ;
         for ( int i = 0 ; i < PlainText.length() ; i ++ ){
-            encryptedtext[i] = Caesar.EncryptChar(PlainText.charAt(i) , NewKey.charAt(i)) ;
+            encryptedtext[i] = Caeser.EncryptChar(PlainText.charAt(i) , NewKey.charAt(i)) ;
         }
         EncryptedText = new String(encryptedtext) ;
         return EncryptedText;
@@ -34,7 +36,7 @@ public class VigenereWithReapeatingKey extends Vigenere {
     public String Decrypt() {
         char plaintext[] = new char[EncryptedText.length()] ;
         for ( int i = 0 ; i < PlainText.length() ; i ++ ){
-            plaintext[i] = Caesar.DecryptChar(EncryptedText.charAt(i) , NewKey.charAt(i) ) ;
+            plaintext[i] = Caeser.DecryptChar(EncryptedText.charAt(i) , NewKey.charAt(i) ) ;
         }
         PlainText = new String(plaintext) ;
         return PlainText;
