@@ -9,35 +9,28 @@ import java.util.Map;
 
 public class PlayFair extends Cipher
 {
-    private ArrayList<pair> Char_Array ;
-    private ArrayList<pair> New_Char_Array;
-    private pair []Char_Index;
-    private char [][]LetterTable = new char[5][5];
+    private ArrayList<pair> Char_Array = new ArrayList<pair>();
+    private ArrayList<pair> New_Char_Array =new ArrayList<pair>();
+    private pair []Char_Index=new pair[2];;
+    private char [][]LetterTable = new char[9][9];
     private char Result_Letter1 , Result_Letter2;
 
     public PlayFair(String plainText, String key)
     {
         super(plainText,key);
-        Char_Index=new pair[2];
-        Char_Array = new ArrayList<pair>();
-        New_Char_Array=new ArrayList<pair>();
-        Key = Key.toUpperCase();
         this.FillTable();
     }
+
     public PlayFair(String plainText)
     {
-        super(plainText,null);
-        Char_Index=new pair[2];
-        Char_Array = new ArrayList<pair>();
-        New_Char_Array=new ArrayList<pair>();
-        Key = Key.toUpperCase();
+        super(plainText, null);
+        this.Key = GenerateRandomKey();
         this.FillTable();
     }
 
     void SplitString()
     {
-        String NewPlainText= PlainText.replaceAll("\\s+", "");
-        NewPlainText=NewPlainText.toUpperCase();
+        String NewPlainText= PlainText;
         int index = 0;
 
 
@@ -74,11 +67,19 @@ public class PlayFair extends Cipher
     {
         Map<Character, Boolean> letters = new HashMap<Character, Boolean>();
         int counter = 0;
-        char initial_letter = 'A';
-        for(int i = 0; i <= 4 ; i++)
+        char initial_letter = '.';
+        for(int i = 0; i <= 8 ; i++)
         {
-            for(int j = 0; j <= 4; j++)
+            for(int j = 0; j <= 8; j++)
             {
+                if(i == 8 && j == 8)
+                {
+                    if(!letters.containsKey(' '))
+                    {
+                        LetterTable[8][8] = ' ';
+                        break;
+                    }
+                }
                 if(counter < Key.length()) {
                     if(!letters.containsKey(Key.charAt(counter))) {
                         LetterTable[i][j] = Key.charAt(counter);
@@ -93,9 +94,9 @@ public class PlayFair extends Cipher
                 }
                 else
                 {
-                    for(int k = 0; k < 26; k++)
+                    for(int k = 0; k < 81; k++)
                     {
-                        if(!letters.containsKey(initial_letter) && initial_letter != 'J')
+                        if(!letters.containsKey(initial_letter))
                         {
                             LetterTable[i][j] = initial_letter;
                             initial_letter++;
@@ -113,14 +114,10 @@ public class PlayFair extends Cipher
     private int Search(pair SearchLetters)
     {
         int Case=0;
-        if(SearchLetters.char1 == 'J')
-            SearchLetters.char1 = 'I';
-        if(SearchLetters.char2 == 'J')
-            SearchLetters.char2 = 'I';
 
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < 9; i++)
         {
-            for(int j = 0; j < 5; j++)
+            for(int j = 0; j < 9; j++)
             {
                 if(SearchLetters.char1==LetterTable[i][j])
                 {
@@ -153,8 +150,7 @@ public class PlayFair extends Cipher
     @Override
     public String getKey ()
     {
-        String lol ="haha";
-        return lol;
+        return Key;
     }
 
     @Override
@@ -168,16 +164,16 @@ public class PlayFair extends Cipher
 
             if(Choice==1)
             {
-                Result_Letter1=LetterTable[Char_Index[0].i][(Char_Index[0].j+1)%5];
-                Result_Letter2=LetterTable[Char_Index[1].i][(Char_Index[1].j+1)%5];
+                Result_Letter1=LetterTable[Char_Index[0].i][(Char_Index[0].j+1)%9];
+                Result_Letter2=LetterTable[Char_Index[1].i][(Char_Index[1].j+1)%9];
 
                 New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
 
             }
             else if(Choice==2)
             {
-                Result_Letter1=LetterTable[(Char_Index[0].i+1)%5][Char_Index[0].j];
-                Result_Letter2=LetterTable[(Char_Index[1].i+1)%5][Char_Index[1].j];
+                Result_Letter1=LetterTable[(Char_Index[0].i+1)%9][Char_Index[0].j];
+                Result_Letter2=LetterTable[(Char_Index[1].i+1)%9][Char_Index[1].j];
 
                 New_Char_Array.add(k,new pair(Result_Letter1,Result_Letter2));
             }
@@ -232,9 +228,9 @@ public class PlayFair extends Cipher
                 index2 = Char_Index[1].j - 1;
 
                 if(index1 == -1)
-                    index1 = 4;
+                    index1 = 8;
                 if(index2 == -1)
-                    index2 = 4;
+                    index2 = 8;
 
                 Result_Letter1 = LetterTable[Char_Index[0].i][index1];
                 Result_Letter2 = LetterTable[Char_Index[1].i][index2];
@@ -248,9 +244,9 @@ public class PlayFair extends Cipher
                 index2 = Char_Index[1].i - 1;
 
                 if(index1 == -1)
-                    index1 = 4;
+                    index1 = 8;
                 if(index2 == -1)
-                    index2 = 4;
+                    index2 = 8;
                 Result_Letter1=LetterTable[index1][Char_Index[0].j];
                 Result_Letter2=LetterTable[index2][Char_Index[1].j];
 
