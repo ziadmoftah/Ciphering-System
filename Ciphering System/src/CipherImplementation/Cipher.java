@@ -8,6 +8,7 @@ public abstract class Cipher {
 
     public Cipher( String plainText, String key) {
         PlainText = plainText;
+        EncryptedText = plainText;
         Key = key;
 
     }

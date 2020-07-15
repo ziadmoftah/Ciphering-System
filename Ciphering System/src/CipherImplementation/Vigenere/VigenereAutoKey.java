@@ -1,6 +1,5 @@
 package CipherImplementation.Vigenere;
 
-import CipherImplementation.Caeser.Caeser;
 
 import java.util.Random;
 

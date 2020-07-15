@@ -1,8 +1,5 @@
 package CipherImplementation.Vigenere;
 
-
-import CipherImplementation.Caeser.Caeser;
-
 public class VigenereWithReapeatingKey extends Vigenere {
     public VigenereWithReapeatingKey(String plainText, String key) {
         super(plainText, key);
