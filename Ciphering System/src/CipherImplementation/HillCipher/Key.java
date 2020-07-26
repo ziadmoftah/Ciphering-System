@@ -9,20 +9,23 @@ class Key
     protected int elements_Inverted[][];
     protected int det;
     protected int det_mod_inverse;
-    protected final int NumOfChars = 95;
+    protected final int NumOfChars;
     
     public Key()
     {
         
         elements = new int[2][2];
         elements_Inverted = new int[2][2];
+        NumOfChars = 95;
         
     }
-    
-    public boolean Have_mod_inv()
+
+    protected boolean Have_mod_inv()
     {
-        for(int i=0;i<NumOfChars;i++)
-        {
+
+
+        for(int i=0;i<NumOfChars;i++){
+
             if((det * i)% NumOfChars == 1)
             {
                 det_mod_inverse = i;
@@ -31,8 +34,32 @@ class Key
         }
         return false;
     }
-    
-    public void Generate()
+
+    protected void create(String keyy){
+
+        elements[0][0] = keyy.charAt(0);
+        elements[0][1] = keyy.charAt(1);
+        elements[1][0] = keyy.charAt(2);
+        elements[1][1] = keyy.charAt(3);
+
+        det = elements[0][0] * elements[1][1] - elements[0][1] * elements[1][0];
+
+        if (!(det != 0 && Have_mod_inv()))
+            Generate();
+        else {
+
+
+            elements_Inverted[0][0] = (elements[1][1] * det_mod_inverse) % NumOfChars;
+            elements_Inverted[1][1] = (elements[0][0] * det_mod_inverse) % NumOfChars;
+            elements_Inverted[0][1] = ((-1*elements[0][1] + NumOfChars) * det_mod_inverse) % NumOfChars;
+            elements_Inverted[1][0] = ((-1*elements[1][0] + NumOfChars) * det_mod_inverse) % NumOfChars;
+
+        }
+    }
+
+
+
+    protected void Generate()
     {
         Random randint = new Random();
         while(true)
@@ -43,7 +70,7 @@ class Key
                 if(elements[0][0] != 0)
                     break;
             }
-        
+
             while(true)
             {
                 elements[0][1] = randint.nextInt(95);
@@ -97,4 +124,5 @@ class Key
         tmp.elements[1][0] %= NumOfChars;
         return tmp;
     }
+
 }
