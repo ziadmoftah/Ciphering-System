@@ -37,10 +37,12 @@ class Key
 
     protected void create(String keyy){
 
+
         elements[0][0] = keyy.charAt(0)-32;
         elements[0][1] = keyy.charAt(1)-32;
         elements[1][0] = keyy.charAt(2)-32;
         elements[1][1] = keyy.charAt(3)-32;
+
 
         det = elements[0][0] * elements[1][1] - elements[0][1] * elements[1][0];
 
