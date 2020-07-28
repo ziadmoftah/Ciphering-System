@@ -7,20 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class PlayFair extends Cipher
+public class PlayFair extends Cipher//Inheritance tree Concept (Level 2)
 {
+    //Inheritance tree Concept (Level 2)***
     private ArrayList<pair> Char_Array = new ArrayList<pair>();
     private ArrayList<pair> New_Char_Array =new ArrayList<pair>();
     private pair []Char_Index=new pair[2];;
     private char [][]LetterTable = new char[9][9];
     private char Result_Letter1 , Result_Letter2;
 
+    //overloading with public PlayFair(String plainText)***
     public PlayFair(String plainText, String key)
     {
         super(plainText,key);
         this.FillTable();
     }
-
+    //overloading with public PlayFair(String plainText, String key)***
     public PlayFair(String plainText)
     {
         super(plainText, null);
@@ -147,12 +149,14 @@ public class PlayFair extends Cipher
         return Case ;
     }
 
+    //Overriding Concept
     @Override
     public String getKey ()
     {
         return Key;
     }
 
+    //Overriding Concept
     @Override
     public String Encrypt ()
     {
@@ -204,7 +208,7 @@ public class PlayFair extends Cipher
 
     }
 
-
+    //Overriding Concept
     @Override
     public String Decrypt ()
     {

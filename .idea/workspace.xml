@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e38cbab7-9f0b-4e2a-acee-9f074751b639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/RailFence/Rail_Fence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/out/production/Ciphering-System/META-INF/Ciphering-System.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Caeser/Caeser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Caeser/Caeser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Cipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Cipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/HillCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/HillCipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/HillCipher/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair/PlayFair.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/PlayFair/PlayFair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/RailFence/Rail_Fence.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/RailFence/Rail_Fence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/Caeser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/Caeser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/Vigenere.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/Vigenere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/VigenereAutoKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/VigenereAutoKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/VigenereWithReapeatingKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/VigenereWithReapeatingKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ciphering System/src/Main/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/Main/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ciphering System/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ciphering System/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Result.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,58 +97,86 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587924138330">
-      <screen x="0" y="0" width="1536" height="824" />
+
+    <state x="550" y="281" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1595086748618">
+      <screen x="0" y="0" width="1366" height="768" />
+
     </state>
+    <state x="550" y="281" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1595086748618" />
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1587924138330" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1595769469798">
-      <screen x="0" y="0" width="1536" height="824" />
+
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1595889277994">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595769469798" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1595769469797">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1595889277994" />
+    <state x="463" y="142" key="FileChooserDialogImpl" timestamp="1595713764468">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595769469797" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1595769469797">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="463" y="142" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1595713764468" />
+    <state width="1323" height="65" key="GridCell.Tab.0.bottom" timestamp="1595898848214">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595769469797" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1595769469797">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="65" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595898848214" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587942780798" />
+    <state width="1323" height="65" key="GridCell.Tab.0.center" timestamp="1595898848214">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595769469797" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1595769469798">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="65" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595898848214" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587942780797" />
+    <state width="1323" height="65" key="GridCell.Tab.0.left" timestamp="1595898848214">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595769469798" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1595769469798">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="65" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595898848214" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587942780797" />
+    <state width="1323" height="65" key="GridCell.Tab.0.right" timestamp="1595898848214">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595769469798" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1595769469798">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="65" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595898848214" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587942780797" />
+    <state width="1323" height="226" key="GridCell.Tab.1.bottom" timestamp="1595887465187">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595769469798" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1595769469798">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="226" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595887465187" />
+    <state width="1323" height="226" key="GridCell.Tab.1.center" timestamp="1595887465187">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595769469798" />
-    <state x="525" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1588463400933">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1323" height="226" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1595887465187" />
+    <state width="1323" height="226" key="GridCell.Tab.1.left" timestamp="1595887465187">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="1323" height="226" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1595887465187" />
+    <state width="1323" height="226" key="GridCell.Tab.1.right" timestamp="1595887465187">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="226" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1595887465187" />
+    <state x="467" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1595872286416">
+      <screen x="0" y="0" width="1366" height="768" />
+
+    </state>
+    <state x="467" y="254" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1595872286416" />
     <state x="525" y="273" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588463400933" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1595766953319">
-      <screen x="0" y="0" width="1536" height="824" />
+
+    <state x="65" y="10" key="new project wizard" timestamp="1595876149839">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1595766953319" />
+    <state x="65" y="10" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1595876149839" />
+    <state x="339" y="172" width="672" height="677" key="run.anything.popup" timestamp="1595886450645">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1595886450645" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1595877959288">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1595877959288" />
+
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/Ciphering System/src/CipherImplementation/Vigenere/VigenereAutoKey.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Ciphering System/src/Main/GUI.java</url>

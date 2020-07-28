@@ -4,9 +4,11 @@ package CipherImplementation.Vigenere;
 import CipherImplementation.Cipher;
 
 import java.util.*;
-public class Caeser extends Cipher {
+public class Caeser extends Cipher {//Inheritance tree Concept (Level 2)
+
 
     private char key;
+    //Static Method Concept***
     private static Boolean IsAlpha(char in){
         return ( in >= 'A' &&  in <= 'Z') || ( in >= 'a' && in <= 'z') ;
     }
@@ -58,6 +60,7 @@ public class Caeser extends Cipher {
         return String.valueOf(this.key);
     }
 
+    //Static Method Concept***
     public static char EncryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
@@ -76,6 +79,8 @@ public class Caeser extends Cipher {
         }
         return 0 ;
     }
+
+    //Static Method Concept***
     public static char DecryptChar ( char in , char currKey ){
         if ( IsAlpha(in)){
             if ( IsLowerCase(in)){
