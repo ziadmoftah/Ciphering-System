@@ -4,7 +4,8 @@ package CipherImplementation.Caeser;
 import CipherImplementation.Cipher;
 
 import java.util.*;
-public class Caeser extends Cipher {
+public class Caeser extends Cipher {//Inheritance tree Concept (Level 2)***
+
 
     private char key;
     private static Boolean IsAlpha(char in){

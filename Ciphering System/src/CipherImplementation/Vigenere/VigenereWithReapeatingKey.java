@@ -1,6 +1,8 @@
 package CipherImplementation.Vigenere;
 
-public class VigenereWithReapeatingKey extends Vigenere {
+public class VigenereWithReapeatingKey extends Vigenere {//Inheritance tree Concept (Level 3)***
+
+
     public VigenereWithReapeatingKey(String plainText, String key) {
         super(plainText, key);
         GetNewKey();
@@ -12,12 +14,14 @@ public class VigenereWithReapeatingKey extends Vigenere {
     }
 
 
-
+    //Overriding Concept***
     @Override
+
     public String getKey() {
         return Key ;
     }
 
+    //Overriding Concept***
     @Override
     public String Encrypt() {
         char encryptedtext[] = new char[PlainText.length()] ;
@@ -28,7 +32,7 @@ public class VigenereWithReapeatingKey extends Vigenere {
         return EncryptedText;
     }
 
-
+    //Overriding Concept***
     @Override
     public String Decrypt() {
         char plaintext[] = new char[EncryptedText.length()] ;
@@ -39,6 +43,7 @@ public class VigenereWithReapeatingKey extends Vigenere {
         return PlainText;
     }
 
+    //Overriding Concept***
     @Override
     String GetNewKey(){
         int count = 0 ;

@@ -18,7 +18,7 @@ public class HillCipher extends Cipher
     {
         super( plaintext , null);
         Hill_Key = new Key();
-        Hill_Key.Generate();
+        Hill_Key.create(keyy);
         chars = new Hashtable();
         Numbers = new Hashtable();
         char ASCII;
@@ -51,7 +51,7 @@ public class HillCipher extends Cipher
         String K  = "";
         for (int i = 0 ; i < 2 ; i ++){
             for (int j = 0 ; j < 2 ; j++){
-                K += (char)this.chars.get(Hill_Key.elements[i][j]);
+                K += (char)(Hill_Key.elements[i][j]+32);
             }
         }
         return K;

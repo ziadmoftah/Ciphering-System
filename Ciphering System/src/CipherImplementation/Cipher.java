@@ -3,6 +3,8 @@ package CipherImplementation;
 import java.util.Random;
 
 public abstract class Cipher {
+    //Inheritance tree Concept (Level 1)
+    //Abstract class Concept
     protected String PlainText, EncryptedText, Key ;
 
 
@@ -10,8 +12,8 @@ public abstract class Cipher {
         PlainText = plainText;
         EncryptedText = plainText;
         Key = key;
-
     }
+
     protected String GenerateRandomKey(){
         char GeneratedKey[] = new char[PlainText.length()] ;
         Random Rd = new Random() ;

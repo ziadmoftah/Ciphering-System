@@ -13,7 +13,7 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 
-
+//User Defined Exception Concept***
 class Handle_Exception extends Exception{  
     public Handle_Exception(String msg){
         super(msg);
@@ -193,6 +193,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void Enc_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enc_ButtonActionPerformed
+
+
         
         String Text;
         if(File_RadioButton.isSelected())
@@ -226,9 +228,19 @@ public class GUI extends javax.swing.JFrame {
             if (flag)
                 C = new HillCipher (Text); 
             else
-                C = new HillCipher (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Encrypt());
-            jTextField1.setText(C.getKey());
+            {
+                String tempHill=jTextField1.getText();
+                if(tempHill.length()!=4)
+                {
+                    JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    C = new HillCipher (Text ,tempHill);
+                    jTextField3.setText(C.Encrypt());
+                    jTextField1.setText(C.getKey());
+                }
+            }
      
         }
         else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
@@ -243,12 +255,22 @@ public class GUI extends javax.swing.JFrame {
 
         }
         else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")){
-            
+
             Rail_Fence C;
             if(!flag){
-                 C  = new Rail_Fence (Text ,Integer.valueOf(jTextField1.getText())); 
-                 jTextField3.setText(C.Encrypt());
-                 jTextField1.setText(C.getKey());
+                try
+                {
+                    int tempInteger=Integer.valueOf(jTextField1.getText());
+                    if(!(tempInteger>1))
+                    {
+                        throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                    }
+                    C  = new Rail_Fence (Text ,tempInteger);
+                    jTextField3.setText(C.Encrypt());
+                    jTextField1.setText(C.getKey());
+                } catch(NumberFormatException E) {
+                    JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
             else
                  throw new Handle_Exception("Please Enter a Key." );
@@ -281,7 +303,8 @@ public class GUI extends javax.swing.JFrame {
         if(File_RadioButton.isSelected())
         {
             FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
-            /////////////////////////// WARILU ENU 3AMAL SAVE////////////////////////////////////////////////////////////////////////////////////////////
+            JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
+
         }
         }
         catch(Handle_Exception e){
@@ -347,9 +370,28 @@ public class GUI extends javax.swing.JFrame {
             if (flag)
                throw new Handle_Exception("Please Enter a Key." );
             else
-                C = new HillCipher (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Decrypt());
-     
+            {
+                String tempHill=jTextField1.getText();
+                if(tempHill.length()!=4)
+                {
+                    JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    String currnetKey=jTextField1.getText();
+                    C = new HillCipher (Text ,tempHill);
+                    if(!currnetKey.equals(C.getKey()))
+                    {
+                        JOptionPane.showMessageDialog(this, "Invalid key!\nKey must generate an invertible matrix,\n" +
+                                "with a non-zero determinant", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    else
+                    {
+                        jTextField1.setText(C.getKey());
+                        jTextField3.setText(C.Decrypt());
+                    }
+                }
+            }
         }
         else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
             
@@ -367,8 +409,21 @@ public class GUI extends javax.swing.JFrame {
             if (flag)
                throw new Handle_Exception("Please Enter a Key." );
             else
-                 C  = new Rail_Fence (Text ,Integer.valueOf(jTextField1.getText())); 
-            jTextField3.setText(C.Decrypt());
+            {
+                try
+                {
+                    int tempInteger=Integer.valueOf(jTextField1.getText());
+                    if(!(tempInteger>1))
+                    {
+                        throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                    }
+                    C  = new Rail_Fence (Text ,tempInteger);
+                    jTextField3.setText(C.Decrypt());
+                } catch(NumberFormatException E) {
+                    JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+
          
         }
         else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Auto Key Cipher")){
@@ -378,8 +433,10 @@ public class GUI extends javax.swing.JFrame {
                throw new Handle_Exception("Please Enter a Key." );
             else
                  C  = new VigenereAutoKey (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Decrypt());
-     
+            //jTextField3.setText(C.Decrypt());
+            jTextField3.setText(C.Decrypt2());
+
+
         }
         else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Repeating Key Cipher")){
             
@@ -395,7 +452,7 @@ public class GUI extends javax.swing.JFrame {
         if(File_RadioButton.isSelected())
         {
             FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
-            /////////////////////////// WARILU ENU 3AMAL SAVE////////////////////////////////////////////////////////////////////////////////////////////
+            JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
         }
         }
         catch(Handle_Exception e){
@@ -407,8 +464,7 @@ public class GUI extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         if(String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher"))
         {
-            jTextField1.setEditable(false);
-            jTextField1.setBackground(Color.GRAY);
+            JOptionPane.showMessageDialog(this, "(For there to be enough movement of letters, the length of the message\n needs to be at least twice the key, but preferably 3 times the key).", "Info", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
 

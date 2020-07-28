@@ -2,7 +2,10 @@ package CipherImplementation.RailFence;
 
 import CipherImplementation.Cipher;
 
-public class Rail_Fence extends Cipher {
+public class Rail_Fence extends Cipher {//Inheritance tree Concept (Level 2)
+
+
+    //Different Access Modifiers Concept ( private Access modifiers )
     private int FencesNumber ;
 
     public Rail_Fence(String Plaintext , int key){
