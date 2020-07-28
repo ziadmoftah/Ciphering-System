@@ -226,7 +226,12 @@ public class GUI extends javax.swing.JFrame {
             
             HillCipher C;
             if (flag)
-                C = new HillCipher (Text); 
+            {
+                C = new HillCipher (Text);
+                JOptionPane.showMessageDialog(this, "No key was given,\nA valid key is generated", "Info", JOptionPane.INFORMATION_MESSAGE);
+                jTextField3.setText(C.Encrypt());
+                jTextField1.setText(C.getKey());
+            }
             else
             {
                 String tempHill=jTextField1.getText();
@@ -237,6 +242,10 @@ public class GUI extends javax.swing.JFrame {
                 else
                 {
                     C = new HillCipher (Text ,tempHill);
+                    if(!tempHill.equals(C.getKey()))
+                    {
+                        JOptionPane.showMessageDialog(this, "The given key is invalid,\nA valid key is generated", "Info", JOptionPane.INFORMATION_MESSAGE);
+                    }
                     jTextField3.setText(C.Encrypt());
                     jTextField1.setText(C.getKey());
                 }
