@@ -52,6 +52,7 @@ public class HillCipher extends Cipher
         for (int i = 0 ; i < 2 ; i ++){
             for (int j = 0 ; j < 2 ; j++){
                 K += (char)(Hill_Key.elements[i][j]+32);
+
             }
         }
         return K;
