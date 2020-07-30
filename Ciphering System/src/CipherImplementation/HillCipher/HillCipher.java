@@ -8,17 +8,17 @@ import java.util.*;
 public class HillCipher extends Cipher
 {
 
-    protected boolean text_even;
-    protected final int NumOfChars = 95;
-    protected Key Hill_Key;
-    protected Dictionary chars;
-    protected Dictionary Numbers;
+    private boolean text_even;
+    private final int NumOfChars = 95;
+    private Key Hill_Key;
+    private Dictionary chars;
+    private Dictionary Numbers;
 
     public HillCipher(String plaintext , String keyy)
     {
         super( plaintext , null);
         Hill_Key = new Key();
-        Hill_Key.create(keyy);
+        Hill_Key.Create(keyy);
         chars = new Hashtable();
         Numbers = new Hashtable();
         char ASCII;

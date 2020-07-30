@@ -7,9 +7,10 @@ class Key
 {
     protected int elements[][];
     protected int elements_Inverted[][];
-    protected int det;
-    protected int det_mod_inverse;
-    protected final int NumOfChars;
+    private final int NumOfChars;
+    private int det;
+    private int det_mod_inverse;
+
 
     public Key()
     {
@@ -20,36 +21,19 @@ class Key
 
     }
 
-    protected boolean Have_mod_inv()
-    {
-
-
-        for(int i=0;i<NumOfChars;i++){
-
-            if((det * i)% NumOfChars == 1)
-            {
-                det_mod_inverse = i;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    protected void create(String keyy){
-
+    protected void Create(String keyy){
 
         elements[0][0] = keyy.charAt(0)-32;
         elements[0][1] = keyy.charAt(1)-32;
         elements[1][0] = keyy.charAt(2)-32;
         elements[1][1] = keyy.charAt(3)-32;
 
-
         det = elements[0][0] * elements[1][1] - elements[0][1] * elements[1][0];
 
         if (!(det != 0 && Have_mod_inv()))
             Generate();
-        else {
 
+        else {
 
             elements_Inverted[0][0] = (elements[1][1] * det_mod_inverse) % NumOfChars;
             elements_Inverted[1][1] = (elements[0][0] * det_mod_inverse) % NumOfChars;
@@ -58,7 +42,6 @@ class Key
 
         }
     }
-
 
 
     protected void Generate()
@@ -107,7 +90,21 @@ class Key
 
     }
 
-    public Vector Key_Times_Vector(Vector vec)
+    private boolean Have_mod_inv()
+    {
+
+        for(int i=0;i<NumOfChars;i++){
+
+            if((det * i)% NumOfChars == 1)
+            {
+                det_mod_inverse = i;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected Vector Key_Times_Vector(Vector vec)
     {
         Vector tmp = new Vector();
         tmp.elements[0][0] = elements[0][0] * vec.elements[0][0] + elements[0][1] * vec.elements[1][0];
@@ -117,7 +114,7 @@ class Key
         return tmp;
     }
 
-    public Vector KeyInverse_Times_Vector(Vector vec)
+    protected Vector KeyInverse_Times_Vector(Vector vec)
     {
         Vector tmp = new Vector();
         tmp.elements[0][0] = elements_Inverted[0][0] * vec.elements[0][0] + elements_Inverted[0][1] * vec.elements[1][0];
