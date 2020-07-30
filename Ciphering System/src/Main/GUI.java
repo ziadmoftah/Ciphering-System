@@ -8,30 +8,37 @@ import CipherImplementation.Vigenere.Caeser;
 import CipherImplementation.Vigenere.VigenereAutoKey;
 import CipherImplementation.Vigenere.VigenereWithReapeatingKey;
 import File.FileInputOutput;
-import javax.swing.JFrame;
-import java.awt.Color;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Scanner;
+
+import static javax.swing.JOptionPane.NO_OPTION;
+import static javax.swing.JOptionPane.YES_OPTION;
 
 
 //User Defined Exception Concept***
-class Handle_Exception extends Exception{  
+class Handle_Exception extends Exception{
     public Handle_Exception(String msg){
         super(msg);
-    }   
+    }
 }
+
 public class GUI extends javax.swing.JFrame {
 
-   
+    public static int generate=0;
     public GUI() {
         initComponents();
         this.setTitle("Ciphering system");
         Text_RadioButton.setSelected(true);
         jTextField3.setEditable(false);
         jTextField3.setBackground(Color.GRAY);
-        
+
     }
 
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -117,72 +124,72 @@ public class GUI extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(File_RadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)
-                                .addComponent(Text_RadioButton))
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(Enc_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(57, 57, 57)
-                                .addComponent(Dec_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap(68, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(74, 74, 74))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(22, 22, 22)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(File_RadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(39, 39, 39)
+                                                                .addComponent(Text_RadioButton))
+                                                        .addComponent(jTextField2)
+                                                        .addComponent(jTextField3)))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(71, 71, 71)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(8, 8, 8)
+                                                                .addComponent(Enc_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(57, 57, 57)
+                                                                .addComponent(Dec_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(File_RadioButton)
-                    .addComponent(Text_RadioButton))
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Dec_Button)
-                    .addComponent(Enc_Button))
-                .addGap(18, 18, 18))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2))
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(File_RadioButton)
+                                        .addComponent(Text_RadioButton))
+                                .addGap(37, 37, 37)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel3))
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4))
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(Dec_Button)
+                                        .addComponent(Enc_Button))
+                                .addGap(18, 18, 18))
         );
 
         pack();
@@ -194,8 +201,8 @@ public class GUI extends javax.swing.JFrame {
 
     private void Enc_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Enc_ButtonActionPerformed
 
+        generate=0;
 
-        
         String Text;
         if(File_RadioButton.isSelected())
             Text = FileInputOutput.Data;
@@ -203,120 +210,186 @@ public class GUI extends javax.swing.JFrame {
             Text = jTextField2.getText();
         boolean flag = false;
         try {
-        if ( jTextField2.getText().equals("") && !File_RadioButton.isSelected()){
-            
-            throw new Handle_Exception("Please Enter all Info." );
-        }
-        if (jTextField1.getText().equals("")){
-            
-            flag = true;      
-        }
-        if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Caeser Cipher")){
-            Caeser C ;
-                
-            if (flag)
-               C  = new Caeser (Text); 
-            else
-                C  = new Caeser (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Encrypt());
-            jTextField1.setText(C.getKey());
-  
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Hill Cipher")){
-            
-            HillCipher C;
-            if (flag)
-                C = new HillCipher (Text); 
-            else
+            if ( jTextField2.getText().equals("") && !File_RadioButton.isSelected()){
+
+                throw new Handle_Exception("Please Enter all Info." );
+            }
+            if (jTextField1.getText().equals("")){
+
+                flag = true;
+            }
+
+            if(flag && !(String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")))
             {
-                String tempHill=jTextField1.getText();
-                if(tempHill.length()!=4)
+                /*hello*/
+                int a=JOptionPane.showConfirmDialog(this,"No key was given.\nGenerarte a valid key?");
+                if(a==YES_OPTION){
+                    generate=1;
+                }
+                if(a==NO_OPTION)
                 {
-                    JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
+                    generate=0;
+                }
+                if(flag && (generate==0))
+                {
+                    throw new Handle_Exception("Enter A Key!");
+                }
+            }
+
+            if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Caeser Cipher")){
+                Caeser C ;
+
+                if (flag && generate==1)
+                {
+                    C  = new Caeser (Text);
+                    jTextField3.setText(C.Encrypt());
+                    jTextField1.setText(C.getKey());
                 }
                 else
                 {
-                    C = new HillCipher (Text ,tempHill);
-                    jTextField3.setText(C.Encrypt());
-                    jTextField1.setText(C.getKey());
-                }
-            }
-     
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
-            
-            PlayFair C;
-            if (flag)
-                C  = new PlayFair (Text); 
-            else
-                 C  = new PlayFair (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Encrypt());
-            jTextField1.setText(C.getKey());
-
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")){
-
-            Rail_Fence C;
-            if(!flag){
-                try
-                {
-                    int tempInteger=Integer.valueOf(jTextField1.getText());
-                    if(!(tempInteger>1))
+                    C  = new Caeser (Text ,jTextField1.getText());
+                    String key=jTextField1.getText();
+                    String new_key=C.getKey();
+                    if(key.length()>1)
                     {
-                        throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                        /*hello*/
+                        int a=JOptionPane.showConfirmDialog(this,"Key size is larger than 1.\nTake the first character?");
+                        if(a==YES_OPTION){
+                            jTextField3.setText(C.Encrypt());
+                            jTextField1.setText(C.getKey());
+                        }
+                        else
+                        {
+                            jTextField1.setText("");
+                            JOptionPane.showMessageDialog(this, "Please enter one character as a key.", "Error", JOptionPane.ERROR_MESSAGE);
+                        }
                     }
-                    C  = new Rail_Fence (Text ,tempInteger);
+                    else
+                    {
+                        jTextField3.setText(C.Encrypt());
+                        jTextField1.setText(C.getKey());
+                    }
+                }
+
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Hill Cipher")){
+
+                HillCipher C;
+                if (flag && generate==1)
+                {
+                    C = new HillCipher (Text);
+                    JOptionPane.showMessageDialog(this, "No key was given,\nA valid key is generated", "Info", JOptionPane.INFORMATION_MESSAGE);
                     jTextField3.setText(C.Encrypt());
                     jTextField1.setText(C.getKey());
-                } catch(NumberFormatException E) {
-                    JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-            }
-            else
-                 throw new Handle_Exception("Please Enter a Key." );
-            
-         
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Auto Key Cipher")){
-                        
-            VigenereAutoKey C;
-            if (flag)
-                C  = new VigenereAutoKey (Text); 
-            else
-                 C  = new VigenereAutoKey (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Encrypt());
-            jTextField1.setText(C.getKey());
-     
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Repeating Key Cipher")){
-            
-            
-            VigenereWithReapeatingKey C;
-            if (flag)
-                C  = new VigenereWithReapeatingKey (Text); 
-            else
-                 C  = new VigenereWithReapeatingKey (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Encrypt());
-            jTextField1.setText(C.getKey());
-        
-        }
-        if(File_RadioButton.isSelected())
-        {
-            FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
-            JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
+                else
+                {
+                    String tempHill=jTextField1.getText();
+                    if(tempHill.length()!=4)
+                    {
+                        JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    else
+                    {
+                        C = new HillCipher (Text ,tempHill);
+                        if(!tempHill.equals(C.getKey()))
+                        {
+                            int a=JOptionPane.showConfirmDialog(this,"The given key is invalid!\nGenerarte a valid key?");
+                            if(a==YES_OPTION){
+                                jTextField3.setText(C.Encrypt());
+                                jTextField1.setText(C.getKey());
+                            }
+                            if(a==NO_OPTION)
+                            {
+                                jTextField1.setText("");
+                                JOptionPane.showMessageDialog(this, "Please enter a valid key.", "Error", JOptionPane.ERROR_MESSAGE);
+                            }
+                            //JOptionPane.showMessageDialog(this, "The given key is invalid,\nA valid key is generated", "Info", JOptionPane.INFORMATION_MESSAGE);
+                        }
 
-        }
+                    }
+                }
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
+
+                PlayFair C;
+                if (flag && generate==1)
+                {
+                    C  = new PlayFair (Text);
+                }
+                else
+                {
+                    C  = new PlayFair (Text ,jTextField1.getText());
+                }
+                jTextField3.setText(C.Encrypt());
+                jTextField1.setText(C.getKey());
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")){
+
+                Rail_Fence C;
+                if(!flag){
+                    try
+                    {
+                        int tempInteger=Integer.valueOf(jTextField1.getText());
+                        if(!(tempInteger>1))
+                        {
+                            throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                        }
+                        C  = new Rail_Fence (Text ,tempInteger);
+                        jTextField3.setText(C.Encrypt());
+                        jTextField1.setText(C.getKey());
+                    } catch(NumberFormatException E) {
+                        JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+                else
+                    throw new Handle_Exception("Please Enter a Key." );
+
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Auto Key Cipher")){
+
+                VigenereAutoKey C;
+                if (flag && generate==1)
+                    C  = new VigenereAutoKey (Text);
+                else
+                    C  = new VigenereAutoKey (Text ,jTextField1.getText());
+                jTextField3.setText(C.Encrypt());
+                jTextField1.setText(C.getKey());
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Repeating Key Cipher")){
+
+
+                VigenereWithReapeatingKey C;
+                if (flag && generate==1)
+                    C  = new VigenereWithReapeatingKey (Text);
+                else
+                    C  = new VigenereWithReapeatingKey (Text ,jTextField1.getText());
+                jTextField3.setText(C.Encrypt());
+                jTextField1.setText(C.getKey());
+
+            }
+            if(File_RadioButton.isSelected())
+            {
+                FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
+                JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
+
+            }
         }
         catch(Handle_Exception e){
-            
+
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
 
-        
+
     }//GEN-LAST:event_Enc_ButtonActionPerformed
 
     private void File_RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_File_RadioButtonActionPerformed
-        
+
         jTextField2.setVisible(false);
         jTextField3.setVisible(false);
         jLabel4.setVisible(false);
@@ -330,16 +403,16 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_File_RadioButtonActionPerformed
 
     private void Text_RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Text_RadioButtonActionPerformed
-        
+
         jTextField2.setVisible(true);
         jTextField3.setVisible(true);
         jLabel4.setVisible(true);
         jLabel5.setVisible(true);
-        
+
     }//GEN-LAST:event_Text_RadioButtonActionPerformed
 
     private void Dec_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Dec_ButtonActionPerformed
-       
+
         String Text;
         if(File_RadioButton.isSelected())
             Text = FileInputOutput.Data;
@@ -347,116 +420,116 @@ public class GUI extends javax.swing.JFrame {
             Text = jTextField2.getText();
         boolean flag = false;
         try {
-        if ( jTextField2.getText().equals("") && !File_RadioButton.isSelected()){
-            
-            throw new Handle_Exception("Please Enter all Info." );
-        }
-        if (jTextField1.getText().equals("")){
-            
-            flag = true;      
-        }
-        if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Caeser Cipher")){
-            Caeser C ;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-                C  = new Caeser (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Decrypt());
-  
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Hill Cipher")){
-            
-            HillCipher C;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-            {
-                String tempHill=jTextField1.getText();
-                if(tempHill.length()!=4)
-                {
-                    JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
-                }
+            if ( jTextField2.getText().equals("") && !File_RadioButton.isSelected()){
+
+                throw new Handle_Exception("Please Enter all Info." );
+            }
+            if (jTextField1.getText().equals("")){
+
+                flag = true;
+            }
+            if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Caeser Cipher")){
+                Caeser C ;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
+                else
+                    C  = new Caeser (Text ,jTextField1.getText());
+                jTextField3.setText(C.Decrypt());
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Hill Cipher")){
+
+                HillCipher C;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
                 else
                 {
-                    String currnetKey=jTextField1.getText();
-                    C = new HillCipher (Text ,tempHill);
-                    if(!currnetKey.equals(C.getKey()))
+                    String tempHill=jTextField1.getText();
+                    if(tempHill.length()!=4)
                     {
-                        JOptionPane.showMessageDialog(this, "Invalid key!\nKey must generate an invertible matrix,\n" +
-                                "with a non-zero determinant", "Error", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(this, "Key Size Must Be Equal To \"4\".", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     else
                     {
-                        jTextField1.setText(C.getKey());
-                        jTextField3.setText(C.Decrypt());
+                        String currnetKey=jTextField1.getText();
+                        C = new HillCipher (Text ,tempHill);
+                        if(!currnetKey.equals(C.getKey()))
+                        {
+                            JOptionPane.showMessageDialog(this, "Invalid key!\nKey must generate an invertible matrix,\n" +
+                                    "with a non-zero determinant", "Error", JOptionPane.ERROR_MESSAGE);
+                        }
+                        else
+                        {
+                            jTextField1.setText(C.getKey());
+                            jTextField3.setText(C.Decrypt());
+                        }
                     }
                 }
             }
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
-            
-            PlayFair C;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-                 C  = new PlayFair (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Decrypt());
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("PlayFair Cipher")){
 
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")){
-       
-            Rail_Fence C;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-            {
-                try
+                PlayFair C;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
+                else
+                    C  = new PlayFair (Text ,jTextField1.getText());
+                jTextField3.setText(C.Decrypt());
+
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("RailFence Cipher")){
+
+                Rail_Fence C;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
+                else
                 {
-                    int tempInteger=Integer.valueOf(jTextField1.getText());
-                    if(!(tempInteger>1))
+                    try
                     {
-                        throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                        int tempInteger=Integer.valueOf(jTextField1.getText());
+                        if(!(tempInteger>1))
+                        {
+                            throw new Handle_Exception("Number of Rails Must Exceed \"1\"");
+                        }
+                        C  = new Rail_Fence (Text ,tempInteger);
+                        jTextField3.setText(C.Decrypt());
+                    } catch(NumberFormatException E) {
+                        JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
                     }
-                    C  = new Rail_Fence (Text ,tempInteger);
-                    jTextField3.setText(C.Decrypt());
-                } catch(NumberFormatException E) {
-                    JOptionPane.showMessageDialog(this, "Invalid Data Type", "Error", JOptionPane.ERROR_MESSAGE);
                 }
+
+
             }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Auto Key Cipher")){
 
-         
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Auto Key Cipher")){
-                        
-            VigenereAutoKey C;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-                 C  = new VigenereAutoKey (Text ,jTextField1.getText()); 
-            //jTextField3.setText(C.Decrypt());
-            jTextField3.setText(C.Decrypt2());
+                VigenereAutoKey C;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
+                else
+                    C  = new VigenereAutoKey (Text ,jTextField1.getText());
+                //jTextField3.setText(C.Decrypt());
+                jTextField3.setText(C.Decrypt2());
 
 
-        }
-        else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Repeating Key Cipher")){
-            
-            
-            VigenereWithReapeatingKey C;
-            if (flag)
-               throw new Handle_Exception("Please Enter a Key." );
-            else
-                 C  = new VigenereWithReapeatingKey (Text ,jTextField1.getText()); 
-            jTextField3.setText(C.Decrypt());
-        
-        }
-        if(File_RadioButton.isSelected())
-        {
-            FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
-            JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
-        }
+            }
+            else if (  String.valueOf(jComboBox1.getSelectedItem()).equals("Vigenere Repeating Key Cipher")){
+
+
+                VigenereWithReapeatingKey C;
+                if (flag)
+                    throw new Handle_Exception("Please Enter a Key." );
+                else
+                    C  = new VigenereWithReapeatingKey (Text ,jTextField1.getText());
+                jTextField3.setText(C.Decrypt());
+
+            }
+            if(File_RadioButton.isSelected())
+            {
+                FileInputOutput.SaveToFile("Result.txt", jTextField3.getText());
+                JOptionPane.showMessageDialog(this,"Result.txt has been updated" , "Info", JOptionPane.INFORMATION_MESSAGE);
+            }
         }
         catch(Handle_Exception e){
-            
+
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_Dec_ButtonActionPerformed
@@ -472,7 +545,7 @@ public class GUI extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -496,7 +569,7 @@ public class GUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GUI().setVisible(true);
-                
+
             }
         });
     }
