@@ -307,7 +307,11 @@ public class GUI extends javax.swing.JFrame {
                             }
                             //JOptionPane.showMessageDialog(this, "The given key is invalid,\nA valid key is generated", "Info", JOptionPane.INFORMATION_MESSAGE);
                         }
-
+                        else
+                        {
+                            jTextField3.setText(C.Encrypt());
+                            jTextField1.setText(C.getKey());
+                        }
                     }
                 }
 
