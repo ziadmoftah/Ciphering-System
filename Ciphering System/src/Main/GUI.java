@@ -4,7 +4,7 @@ package Main;
 import CipherImplementation.HillCipher.HillCipher;
 import CipherImplementation.PlayFair.PlayFair;
 import CipherImplementation.RailFence.Rail_Fence;
-import CipherImplementation.Vigenere.Caeser;
+import CipherImplementation.Caeser.Caeser;
 import CipherImplementation.Vigenere.VigenereAutoKey;
 import CipherImplementation.Vigenere.VigenereWithReapeatingKey;
 import File.FileInputOutput;
