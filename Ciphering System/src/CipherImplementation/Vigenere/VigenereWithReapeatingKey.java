@@ -1,5 +1,7 @@
 package CipherImplementation.Vigenere;
 
+import CipherImplementation.Caeser.Caeser;
+
 public class VigenereWithReapeatingKey extends Vigenere {//Inheritance tree Concept (Level 3)***
 
 

@@ -1,6 +1,8 @@
 package CipherImplementation.Vigenere;
 
 
+import CipherImplementation.Caeser.Caeser;
+
 import java.util.Random;
 
 public class VigenereAutoKey extends Vigenere {//Inheritance tree Concept (Level 3)***
@@ -127,7 +129,7 @@ public class VigenereAutoKey extends Vigenere {//Inheritance tree Concept (Level
             DecryptedText[i]=tempChar;
         }
         System.out.println("In The Fun\nNew Key: "+newKey+"\nKey : "+Key);
-        String output="";
+        String output = "";
         for(int i=0;i<PlainText.length();++i)
         {
             output=output+DecryptedText[i];
@@ -135,14 +137,3 @@ public class VigenereAutoKey extends Vigenere {//Inheritance tree Concept (Level
         return output;
     }
 }
-/*
-key     :qwe
-new key :qweeabcde
-text    :abcde
-res     :zxcvb
-
-key    :qwe
-new key:qweabcd
-text   :zxcvb
-res    :abcd
- */
